@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1 class="fr">GAME HUB</h1>
+        <div id="home" class="card-container">
+            <div class="card" onclick="showSection('page1')"><div class="incard"></div><span class="cardspan">Rock,Paper and Scissors!</span></div>
+            <div class="card" onclick="showSection('page2')"><div class="incard2"></div><span class="cardspan3">Memory Game</span></div>
+            <div class="card" onclick="showSection('page3')"><div class="incard3"></div><span class="cardspan2">Tic Tac Toe</span></div>
+            <div class="card" onclick="showSection('page4')"><div class="incard4"></div><span class="cardspan4">Snake Game</span></div>
+        </div>
+        
+        <div id="page1" style="display:none;">
+            <div class="rps-container">
+                <button class="back" onclick="showSection('home')">Back To Hub</button>
+                <h1 class="df">Rock, Paper, Scissors</h1>
+                <div id="choices">
+                    <button class="g" onclick="playGame('rock')">Rock</button>
+                    <button class="g" onclick="playGame('paper')">Paper</button>
+                    <button class="g" onclick="playGame('scissors')">Scissors</button>
+                </div>
+                <div id="result">
+                    <p id="player-choice">Your Choice:</p>
+                    <p id="computer-choice">Computer's Choice: </p>
+                    <p id="outcome">Result: </p>
+                </div>
+                <!-- <button id="restart3" onclick="restartGame()">Restart Game</button> -->
+            </div>
+        </div>
+
+        <div id="page2" style="display:none;">
+            <button class="back2" onclick="showSection('home')"><span class="te">Back To Hub</span></button>
+            <h1 class="mem">Memory Game</h1>
+            <div class="game-board" id="gameBoard"></div>
+            <button id="restart2">Restart Game</button>
+        </div>
+
+        <div id="page4" style="display:none;">
+            <button class="backs" onclick="showSection('home')">Back To Hub</button>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+        </div>
+
+        <div id="page3" style="display:none;">
+            <button class="back" onclick="showSection('home')">Back To Hub</button>
+            <h1>Tic Tac Toe</h1>
+            <div id="game">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <div class="winning-line" id="winning-line"></div>
+            <button id="restart">Restart Game</button>
+            <p id="status">Player X's turn</p>
+        </div>
+    </main>
+    <script src="logic.js"></script>
+</body>
+</html>

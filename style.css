@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body, html {
+            font-family: 'New Tegomin', serif;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image:url(sm.png);
+            background-repeat: none;
+            background-size: 100vw 100vh;
+            background-position:top;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        
+        .back{
+        position: relative;
+        left:-560px;
+        top:10px;
+        padding: 30px 40px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 10px 10px;
+        background-color: rgb(9, 255, 26);
+        border:none;
+        font-weight: 700;
+        box-shadow: 5px 5px 10px 1px rgb(234, 255, 0);
+    }
+        .backs{
+        position: relative;
+        left:-260px;
+        top:10px;
+        padding: 30px 20px;
+        font-size: 1em;
+        height: 20%;
+        cursor: pointer;
+        border-radius: 10px 10px;
+        background-color: rgb(9, 255, 26);
+        border:none;
+        font-weight: 700;
+        box-shadow: 5px 5px 10px 1px rgb(234, 255, 0);
+    }
+        #restart {
+        margin-top: 20px;
+        padding: 30px 40px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 50px 50px;
+        box-shadow: 5px 5px 12px 3px rgb(234, 255, 0);
+        background-color: rgb(9, 255, 26);
+        border:none;
+        font-weight: 700;
+    }
+        .card {
+            background-color: rgb(244, 128, 46);
+            border: 5px solid white;
+            border-radius: 8px;
+            width: 230px;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px 20px;
+            font-size: 25px;
+            position: relative;
+            top:-50px;
+            color:rgb(255, 255, 255);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+
+    .winning-line {
+        position: absolute;
+        height: 5px;
+        background-color: rgb(9, 255, 26);
+        transform-origin: 0 0;
+        transition: background-color 0.3s;
+    }
+
+        #page2{
+            display: none;
+        }
+        #page4{
+            display:none;
+        }
+        #page3 {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* background-color: rgb(157, 157, 123); */
+            background-image:url("sm.png") ;
+            position: fixed;
+            background-repeat: none;
+            background-size: 100vw 100vh;
+            top: 0;
+            left: 0;
+        }
+
+        h1 {
+            color: #9fff0f;
+            font-size: 45px;
+            margin-top: 20px;
+            position: relative;
+            top:-100px;
+        }
+
+        #game {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 15px;
+            margin-top: 10px;
+            position: relative;
+            top:-40px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            background-color: #989eb0;
+            border: 2px solid #9fff0f;
+            cursor: pointer;
+        }
+
+        #status {
+            font-size: 1.5em;
+            color: #9fff0f;
+            margin-top: 20px;
+        }
+
+        #restart {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .back {
+            margin: 10px;
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            position: relative;
+            
+        }
+        .fr{
+            font-size:60px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left:340px;
+            top:-130px;
+            color:rgb(244, 128, 46);
+        }
+        .incard{
+            width: 190px;
+            height: 130px;
+            position: absolute;
+            top:17px;
+            background-color: white;
+            background-image: url(roc.png);
+            background-position: center;
+            background-size: 190px 140px;
+        }
+        .incard2{
+            width: 190px;
+            height: 130px;
+            position: absolute;
+            top:17px;
+            background-image: url(mem.png);
+            background-position: center;
+            background-size: 190px 140px;
+        }
+        .incard4{
+            width: 190px;
+            height: 130px;
+            position: absolute;
+            top:17px;
+            background-image: url(sna.png);
+            background-position: center;
+            background-size: 190px 140px;
+        }
+        .incard3{
+            width: 190px;
+            height: 130px;
+            position: absolute;
+            top:17px;
+            background-image: url(tic.png);
+            /* background-repeat: none; */
+            background-position: center;
+            background-size: 190px 140px
+        }
+        .cardspan{
+            position: absolute;
+            top:190px;
+            left:20px;
+        }
+        .cardspan2{
+            position: absolute;
+            top:190px;
+            left:50px;
+        }
+        .cardspan4{
+            position: absolute;
+            top:190px;
+            left:40px;
+        }
+        .cardspan3{
+            position: absolute;
+            top:190px;
+            left:25px;
+        }
+
+
+
+
+    .game-board {
+        display: grid;
+        grid-template-columns: repeat(4, 100px);
+        gap: 10px;
+        margin-top: 20px;
+        position: relative;
+        left:-120px;
+    }
+
+    .cardm {
+        width: 100px;
+        height: 100px;
+        background-color:rgb(244, 128, 46);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.3s;
+        transform-style: preserve-3d;
+        position: relative;
+        top:-20px;
+    }
+
+    .cardm.flipped {
+        background-color: #2ecc71;
+        color: #fff;
+    }
+
+    .cardm .content {
+        display: none;
+    }
+    #restart2{
+        padding: 10px 20px;
+            font-size: 1em;
+            width: 150px;
+            height: 40px;
+            margin-top: 20px;
+            cursor: pointer;
+            position: relative;
+            top:170px;
+            left:150px;
+            border-radius: 50px 50px;
+        box-shadow: 5px 5px 12px 3px rgb(234, 255, 0);
+        background-color: rgb(9, 255, 26);
+        border:none;
+        font-weight: 700;
+    }
+    .mem{
+        position: relative;
+        left:230px;
+        top:-130px;
+        color:rgb(9, 255, 26);
+    }
+    .back2{
+        padding: 20px 30px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 20px 20px;
+        background-color: rgb(9, 255, 26);
+        border:none;
+        height: 40px;
+        font-weight: 700;
+        box-shadow: 5px 5px 10px 1px rgb(234, 255, 0);
+        position: relative;
+        top:170px;
+    }
+    .te{
+        position:relative;
+        top:-8px;
+    }
+    .back3{
+        padding: 20px 30px;
+        font-size: 0.9em;
+        cursor: pointer;
+        border-radius: 20px 20px;
+        background-color: rgb(9, 255, 26);
+        border:none;
+        font-weight: 700;
+        box-shadow: 5px 5px 10px 1px rgb(234, 255, 0);
+        width: 150px;
+        height: 30px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top:20px;
+        left:-500px;
+    }
+
+    .rps-container {
+    text-align: center;
+    padding: 20px;
+    background:linear-gradient(180deg,rgb(0, 110, 255),rgb(255, 192, 203));
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 50vw;
+    height: 80vh;
+}
+
+h1 {
+    font-size: 2em;
+    color: rgb(9, 255, 26);
+}
+#computer-choice{
+    position: relative;
+    top:-180px;
+    left:-150px;
+    font-size: 30px;
+}
+#choices button {
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+#page1{
+    display: none;
+    color:white;
+}
+
+#choices button:hover {
+    transform: scale(1.1);
+}
+
+#result3 p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+#outcome{
+    position: relative;
+    top:-65px;
+    left:-180px;
+    font-size: 30px;
+}
+#restart3 {
+    font-size: 1em;
+    padding: 8px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+    position: relative;
+    top:170px;
+}
+
+#restart3:hover {
+    transform: scale(1.1);
+}
+.df{
+    color:rgb(9, 255, 26);
+    position: relative;
+    top:-150px;
+
+}
+#player-choice{
+    position: relative;
+    top:150px;
+    left:-190px;
+    font-size: 30px;
+}
+.g{
+    position: relative;
+        top:300px;
+}
+.gt{
+    position: relative;
+    right:-50px;
+}
+canvas {
+    border: 10px solid #000;
+    display: block;
+    margin: 0px auto;
+    background-image: url("sm.png");
+  }
+
+  #gameCanvas{
+    height: 60%;
+  }

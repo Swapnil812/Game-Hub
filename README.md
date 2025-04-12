@@ -1,2 +1,3 @@
-# Game-Hub
-A web-based game hub featuring Tic Tac Toe, Memory Game, Rock Paper Scissors, and Snake Game
+# ScribblePad-Hackathon-24
+
+## Project Topic: Game Hub - Play What you Like
